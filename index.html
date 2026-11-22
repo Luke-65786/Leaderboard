@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101110">
+<title>Dropzone — Tournament Leaderboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><div class="shell bar">
+  <a class="brand" href="./"><span class="brand-mark">◈</span> DROPZONE</a>
+  <button class="button subtle" id="rules" type="button"><span aria-hidden="true">⚙</span> Scoring rules</button>
+</div></header>
+<main class="shell">
+  <section class="hero">
+    <div class="hero-copy"><div class="eyebrow"><span></span> TOURNAMENT STANDINGS</div>
+      <h1>Leaderboard<span>.</span></h1>
+      <p>Track placements, eliminations, and the teams on top.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true"><i></i><i></i><i></i><b>+</b><b>+</b></div>
+  </section>
+  <section aria-label="Tournament totals" class="stats">
+    <article><span class="stat-icon" aria-hidden="true">◈</span><div><div class="stat-label">TEAMS</div><strong id="team-count">0</strong></div></article>
+    <article><span class="stat-icon" aria-hidden="true">◎</span><div><div class="stat-label">MATCH RESULTS</div><strong id="result-count">0</strong></div></article>
+    <article><span class="stat-icon" aria-hidden="true">↗</span><div><div class="stat-label">TOTAL ELIMINATIONS</div><strong id="elim-count">0</strong></div></article>
+  </section>
+  <section class="standings" aria-labelledby="standings-title">
+    <div class="section-head"><div><h2 id="standings-title">Team standings</h2><p>Ranked by total points, then eliminations.</p></div>
+      <div class="actions"><button class="button subtle" id="add-team" type="button"><span aria-hidden="true">+</span> Add team</button><button class="button primary" id="add-result" type="button"><span aria-hidden="true">+</span> Add result</button></div>
+    </div>
+    <div class="table-card">
+      <div class="table-scroll"><table><thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">Results</th><th scope="col">Placement pts</th><th scope="col">Elims</th><th scope="col">Elim pts</th><th scope="col">Total pts</th><th scope="col"><span class="sr-only">Team actions</span></th></tr></thead><tbody id="rows"></tbody></table></div>
+      <div class="table-footer"><span id="table-info"></span><button class="text-button" id="clear-demo" type="button">Clear sample teams</button></div>
+    </div>
+  </section>
+  <p id="status" class="sr-only" role="status"></p>
+  <footer><span>◈ &nbsp; DROPZONE</span><span>Saved in this browser</span></footer>
+</main>
+<dialog id="dialog"><div id="dialog-content"></div></dialog>
+</body>
+</html>
